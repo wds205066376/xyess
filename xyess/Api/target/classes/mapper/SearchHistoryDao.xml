@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rabbiter.fm.dao.SearchHistoryDao">
+    <resultMap id="BaseResultMap" type="com.rabbiter.fm.model.SearchHistoryModel">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="keyword" property="keyword" />
+        <result column="create_time" property="createTime" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <insert id="insert" parameterType="com.rabbiter.fm.model.SearchHistoryModel">
+        INSERT INTO search_history (
+            user_id, keyword, create_time, is_deleted
+        ) VALUES (
+            #{userId}, #{keyword}, NOW(), 0
+        )
+    </insert>
+
+    <select id="getRecentHistory" resultMap="BaseResultMap">
+        SELECT * FROM search_history 
+        WHERE user_id = #{userId} 
+        AND is_deleted = 0
+        ORDER BY create_time DESC 
+        LIMIT #{limit}
+    </select>
+
+    <update id="deleteHistory">
+        UPDATE search_history 
+        SET is_deleted = 1 
+        WHERE user_id = #{userId} 
+        AND id = #{id}
+    </update>
+
+    <update id="clearHistory">
+        UPDATE search_history 
+        SET is_deleted = 1 
+        WHERE user_id = #{userId}
+    </update>
+
+    <select id="checkExist" resultMap="BaseResultMap">
+        SELECT * FROM search_history 
+        WHERE user_id = #{userId} 
+        AND keyword = #{keyword}
+        AND is_deleted = 0
+        LIMIT 1
+    </select>
+</mapper>

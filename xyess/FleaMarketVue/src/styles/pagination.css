@@ -1,0 +1,96 @@
+/* 分页器基础样式 */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-pagination {
+  --el-pagination-bg-color: #fff;
+  --el-pagination-hover-color: #409EFF;
+  --el-pagination-button-color: #606266;
+  --el-pagination-button-bg-color: #fff;
+  --el-pagination-button-disabled-color: #C0C4CC;
+  --el-pagination-button-disabled-bg-color: #fff;
+  --el-pagination-border-radius: 8px;
+}
+
+.custom-pagination .el-pagination__total {
+  margin-right: 16px;
+}
+
+.custom-pagination .el-pagination__sizes {
+  margin-right: 16px;
+}
+
+.custom-pagination .el-pagination__sizes .el-select .el-input {
+  width: 110px;
+}
+
+.custom-pagination .el-pagination__sizes .el-select .el-input .el-input__inner {
+  border-radius: 8px;
+}
+
+.custom-pagination button {
+  background-color: var(--el-pagination-button-bg-color);
+  color: var(--el-pagination-button-color);
+  border: 1px solid #dcdfe6;
+  border-radius: var(--el-pagination-border-radius);
+  padding: 0 4px;
+  min-width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin: 0 4px;
+  transition: all 0.3s;
+}
+
+.custom-pagination button:hover {
+  color: var(--el-pagination-hover-color);
+  border-color: var(--el-pagination-hover-color);
+  background-color: rgba(64, 158, 255, 0.1);
+}
+
+.custom-pagination button:disabled {
+  color: var(--el-pagination-button-disabled-color);
+  background-color: var(--el-pagination-button-disabled-bg-color);
+  border-color: #e4e7ed;
+  cursor: not-allowed;
+}
+
+.custom-pagination button.btn-prev,
+.custom-pagination button.btn-next {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-pagination .el-pager li {
+  background-color: var(--el-pagination-bg-color);
+  border: 1px solid #dcdfe6;
+  border-radius: var(--el-pagination-border-radius);
+  padding: 0 4px;
+  min-width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin: 0 4px;
+  transition: all 0.3s;
+}
+
+.custom-pagination .el-pager li:hover {
+  color: var(--el-pagination-hover-color);
+  border-color: var(--el-pagination-hover-color);
+  background-color: rgba(64, 158, 255, 0.1);
+}
+
+.custom-pagination .el-pager li.is-active {
+  background: linear-gradient(135deg, #409EFF 0%, #36cfc9 100%);
+  color: #fff;
+  border: none;
+}
+
+.custom-pagination .el-pager li.is-active:hover {
+  color: #fff;
+} 

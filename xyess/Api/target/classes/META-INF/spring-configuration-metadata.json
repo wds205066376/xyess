@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "name": "recommendation",
+      "type": "com.rabbiter.fm.config.RecommendationConfig",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "recommendation.cache-expiration-minutes",
+      "type": "java.lang.Integer",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.category-weight",
+      "type": "java.lang.Double",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.default-limit",
+      "type": "java.lang.Integer",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.favorite-weight",
+      "type": "java.lang.Double",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.max-limit",
+      "type": "java.lang.Integer",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.popular-items-update-interval",
+      "type": "java.lang.Integer",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.purchase-weight",
+      "type": "java.lang.Double",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.time-decay-factor",
+      "type": "java.lang.Double",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    },
+    {
+      "name": "recommendation.view-weight",
+      "type": "java.lang.Double",
+      "sourceType": "com.rabbiter.fm.config.RecommendationConfig"
+    }
+  ],
+  "hints": []
+}

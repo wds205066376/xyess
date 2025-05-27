@@ -1,0 +1,22 @@
+# 推荐系统配置
+recommendation:
+  # 时间衰减因子（天）
+  time-decay-factor: 0.1
+  # 类别权重
+  category-weight: 0.3
+  # 行为权重
+  view-weight: 1.0
+  favorite-weight: 2.0
+  purchase-weight: 3.0
+  # 缓存过期时间（分钟）
+  cache-expiration-minutes: 30
+  # 热门商品更新间隔（分钟）
+  popular-items-update-interval: 60
+  # 推荐结果数量限制
+  default-limit: 10
+  max-limit: 50
+
+# 缓存配置
+spring:
+  cache:
+    type: none
